@@ -2,7 +2,7 @@ const questionsArray = [
 
     {
         number: 1,
-        question: "What is the correct way to declare a variable in JavaScript?",
+        title: "What is the correct way to declare a variable in JavaScript?",
         options: [
             { answer: "#var myVariable" },
             { answer: "%myVariable" },
@@ -13,8 +13,8 @@ const questionsArray = [
     },
     {
         number: 2,
-        question: "Which of the following is not a data type in JavaScript?",
-        optionS: [
+        title: "Which of the following is not a data type in JavaScript?",
+        options: [
             { answer: "String" },
             { answer: "Boolean" },
             { answer: "Array" },
@@ -24,7 +24,7 @@ const questionsArray = [
 
     {
         number: 3,
-        question: "What is the correct way to create an object in JavaScript ?",
+        title: "What is the correct way to create an object in JavaScript ?",
         options: [
             { answer: "object myObject" },
             { answer: "myObject = new Object()" },
@@ -35,7 +35,7 @@ const questionsArray = [
     },
     {
         number: 4,
-        question: "Which of the following is not a looping construct in JavaScript ?",
+        title: "Which of the following is not a looping construct in JavaScript ?",
         options: [
             { answer: "for" },
             { answer: "while" },
@@ -46,7 +46,7 @@ const questionsArray = [
     },
     {
         number: 5,
-        question: "What is the correct way to add an element to an array in JavaScript ?",
+        title: "What is the correct way to add an element to an array in JavaScript ?",
         options: [
             { answer: "myArray.add(element)" },
             { answer: "myArray.append(element)" },
@@ -57,7 +57,7 @@ const questionsArray = [
     },
     {
         number: 6,
-        question: "Which of the following is not an event in JavaScript ?",
+        title: "Which of the following is not an event in JavaScript ?",
         options: [
             { answer: "onclick" },
             { answer: "onsubmit" },
@@ -68,7 +68,7 @@ const questionsArray = [
     },
     {
         number: 7,
-        question: "What is the correct way to create a function in JavaScript ?",
+        title: "What is the correct way to create a function in JavaScript ?",
         options: [
             { answer: "function myFunction()", isCorrect: true },
             { answer: "var myFunction = function ()" },
@@ -79,7 +79,7 @@ const questionsArray = [
     },
     {
         number: 8,
-        question: " Which of the following is not a conditional statement in JavaScript ?",
+        title: " Which of the following is not a conditional statement in JavaScript ?",
         options: [
             { answer: "if" },
             { answer: "else" },
@@ -90,7 +90,7 @@ const questionsArray = [
     },
     {
         number: 9,
-        question: "What is the correct way to access an element by its id in JavaScript ?",
+        title: "What is the correct way to access an element by its id in JavaScript ?",
         options: [
             { answer: 'getElementById("myId")', isCorrect:true },
             { answer: 'findElement("myId")' },
@@ -101,7 +101,7 @@ const questionsArray = [
     },
     {
         number: 10,
-        question: "What is the correct way to convert a string to an integer in JavaScript ?",
+        title: "What is the correct way to convert a string to an integer in JavaScript ?",
         options: [
             { answer: 'stringToInt("myString")' },
             { answer: 'parseInt("myString")', isCorrect: true },
