@@ -4,43 +4,45 @@ Declare variables with querySelector (what are we interacting with)
 
 Declare variables needed
 
-SET array of objects for the questions Oject = [{qNumber, questions, options [{answers, isCorrect/*boolean*/}] , {}...];
+SET array of objects for the questions Oject = [{qNumber, questions, options [{answers, isCorrect/*boolean*/}] , {...}...]; ✅
 
 
-INIT function is called when the page loads??
+INIT function is called when the page loads?? = all doen in start game funtion instead
 
 START game
     
-    /*SET start game
-    DISPLAY #questions <div> (loop start?)
-    START timer (timer interval)
+    /*SET start game ✅
+    DISPLAY #questions <div> (loop start?)✅
+    START timer (timer interval) ✅
     */
 
-    SET start game
-        RESET the DOM state (clearing all previous questions <div> and reset variables to default)
-        FOR EACH questions in questions
-            CREATE new element DOM structure
-            PUSH element to new array along with question it represents
-            CREATE option el with data-state if correct
+    SET start game ✅
+        RESET the DOM state (clearing all previous questions <div> and reset variables to default)✅
+        FOR EACH questions in questions ✅
+            CREATE new element DOM structure -> <div>   (create, populate, append)✅
+            PUSH element to new array along with question it represents ✅
+            CREATE option element with data-state if correct ?? ✅
 
 new array = [
     { element: <div>;
       question: _reference to original question object_
       answer: true|false if correct, null if not yet set
    }, {...}, ...
-]
+]✅
 
-    EVENT listener -> user click the answer
+    EVENT listener -> user click the answer (socre, sound, time deduction and transition) ✅
 
-    IF correct answer -> RECORD result in array
+    sound off
+
+    IF correct answer -> RECORD result in array ✅
 
     IF !correct answers
-    REMOVE time from timer -10 sec
+    REMOVE time from timer -10 sec ✅
  
-    function nextQuestion -> move to next question
-    look at existing global question qNumber
-    look up question entry from array of element created, global element
-    hide current question element, display new question element
+    function nextQuestion -> move to next question = transition function ✅
+    look at existing global question qNumber = questionCounter ✅
+    look up question entry from array of element created, global element (in tranisiton and answerClick functions✅
+    hide current question element, display new question element ✅
 
 
 
