@@ -87,3 +87,10 @@ body {
     right: 10px;
   }
   
+  .correct {
+    background-color: green;
+  }
+
+  .incorrect {
+    background-color: red;
+  }
