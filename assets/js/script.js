@@ -1,8 +1,9 @@
 // declare variables with querySelector
 let startButton = document.querySelector("#start-button");
-let timerElement = document.querySelector(".timer");
+let timerElement = document.querySelector("#time");
 let scores = document.querySelector(".scores");
 let questionContainer = document.querySelector("#questions");
+
 
 // declare variables needed
 let timer;
@@ -10,8 +11,9 @@ let timerCount;
 
 questionsDOM = [];
 
-
+// the startGame function is called when the start button is clicked
 function startGame() {
+
 
     questionsArray.forEach(q => {
         questionsDOM.push({
@@ -20,6 +22,8 @@ function startGame() {
             answer: null
         })
     })
+
+    setTimer();
 };
 
 function createQuestionDiv(question) {
@@ -53,12 +57,29 @@ function createQuestionDiv(question) {
     return questionDiv;
 
 }
+// when the user click an answer
 function answerClick (event){
     event.target.className = "correct";
 
 
 };
 
+// set a timer
+function setTimer(){
+    let time = questionsArray.length *10;
+    let timer = setInterval(function(){
+        time--;
+        timerElement.textContent = time
 
+        if(time <= 0){
+            clearInterval(timer);
+            timerElement.textContent = "Time Off. Game over"
+        }
+    }, 1000);
 
-startGame();
+}
+
+// add eventListener for startGame when clicking the button (not on page loading)
+startButton.addEventListener("click",()=>{startGame()});
+
+//
