@@ -1,4 +1,4 @@
-const questionArray = [
+const questionsArray = [
 
     {
         number: 1,
