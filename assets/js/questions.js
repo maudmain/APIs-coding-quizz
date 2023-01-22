@@ -92,8 +92,8 @@ const questionsArray = [
         number: 9,
         title: "What is the correct way to access an element by its id in JavaScript ?",
         options: [
-            { answer: 'getElementById("myId")', isCorrect:true },
-            { answer: 'findElement("myId")' },
+            { answer: "getElementById(\"myI\")", isCorrect: true },
+            { answer: "findElement(\"myId\")" },
             { answer: "document.myId" },
             { answer: "#myId" },
 
@@ -103,10 +103,10 @@ const questionsArray = [
         number: 10,
         title: "What is the correct way to convert a string to an integer in JavaScript ?",
         options: [
-            { answer: 'stringToInt("myString")' },
-            { answer: 'parseInt("myString")', isCorrect: true },
-            { answer: 'toInt("myString")' },
-            { answer: 'int("myString")' },
+            { answer: "stringToInt(\"myString\")" },
+            { answer: "arseInt(\"myString\")", isCorrect: true },
+            { answer: "toInt(\"myString\")" },
+            { answer: "int(\"myString\")" },
 
         ]
     },
