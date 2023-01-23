@@ -9,6 +9,7 @@ let finalScoreSpan = document.querySelector("#final-score");
 let InitialsInput = document.querySelector("#initials");
 let submitButton = document.querySelector("#submit");
 let highScoreChart = document.querySelector("#highscores");
+let clearButton = document.querySelector("#clear")
 
 // declare variables needed
 let time;
@@ -29,7 +30,7 @@ function startGame() {
 
     questionCounter = -1; // starts at -1 so the first question is index 0
 
-    // ?? 
+    // TO COMMENT
     questionsArray.forEach(q => {
         questionsDOM.push({
             element: createQuestionDiv(q),
@@ -72,9 +73,7 @@ function createQuestionDiv(question) {
 
         // add eventListener for the answer button and pass the reference to the function
         answerButton.addEventListener("click", answerClick);
-
     });
-
     return questionDiv;
 }
 
@@ -82,6 +81,7 @@ function createQuestionDiv(question) {
 - move to next question
 - remove time if incorrect answer
 */
+// button background color set for debugging purposes
 function answerClick(event) {
     let currentQuestion = questionsDOM[questionCounter];
 
@@ -145,12 +145,10 @@ function endGame() {
 
     // end-screen to be displayed, change class
     endScreenDiv.className = "";
-
     finalScoreSpan.textContent = score;
 }
 
 // scores to be stored localy and retrieve on the highscores page
-
 submitButton?.addEventListener("click", function (event) {
     event.preventDefault();
     //create and array to hold the initials and scores
@@ -171,5 +169,12 @@ if (highScoreChart) {
         highScoreChart.appendChild(scoreEntry);
     })
 }
+
+// clear the data from the highscore page
+function clearData() {
+    localStorage.clear();
+    highScoreChart.innerHTML = "";
+}
+clearButton.addEventListener("click", clearData);
 
 
