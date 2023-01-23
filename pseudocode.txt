@@ -1,13 +1,13 @@
 Quizz
 
-Declare variables with querySelector (what are we interacting with)
+Declare variables with querySelector (what are we interacting with)✅
 
-Declare variables needed
+Declare variables needed ✅
 
 SET array of objects for the questions Oject = [{qNumber, questions, options [{answers, isCorrect/*boolean*/}] , {...}...]; ✅
 
 
-INIT function is called when the page loads?? = all doen in start game funtion instead
+INIT function is called when the page loads?? = all done in start game funtion instead
 
 START game
     
@@ -49,11 +49,19 @@ new array = [
     END GAME -> timer ends or questions all answered (DOM events)
 
 END game
-    DISPLAY #end-screen
-    CALCULATE score
-    INPUT initials
+    DISPLAY #end-screen ✅
+    CALCULATE + display score ✅
+    INPUT initials✅
 
-    STORE score in localSTorage by clicking submit
+    STORE score in localSTorage by clicking submit ✅
 
-    ADD to the highscores sheet as <ol>
+    ADD to the highscores sheet as <ol> ✅
 
+
+To do if enough time (not in the acceptance criteria):
+- remove colour for answer button (this was just for debugging)
+- audio for corect/incorrect answers to do instead 
+- fix the timer function if questions answered before the time ends
+- end screen, check input validation criteria
+- clear score button on highscores page ✅
+- 
