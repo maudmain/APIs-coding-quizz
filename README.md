@@ -22,7 +22,7 @@ Create a code quiz that contains the following requirements:
 - When the game ends, it should display their score and give the user the ability to save their initials and their score
 
 ## Usage
-To view the final results, you will need to open the page in the browser [Deployed landing page]().
+To view the final results, you will need to open the page in the browser [Deployed Quizz landing page](https://maudmain.github.io/APIs-coding-quizz/).
 
 The landing page displays the quiz rules and a Start Quizz button. 
 ![screenshot landing page](./assets/img/screenshot-CodingQuiz-landing%20page.png)
@@ -46,15 +46,16 @@ On the highscore page, you will be able to see the results stored locally. You w
 - T-L-K for his help undestanding and white-boarding the concepts for this challenge
 
 What I have learned/ Resources:
-- array.prototype.forEach() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach 
-- document. createElement() https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement 
-- setInterval() https://developer.mozilla.org/en-US/docs/Web/API/setInterval 
-- Nullish coalescing operator (??) https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
-- addEventListener() https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener 
-- Element: click event https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event
-- localStorage https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage 
-- JSON.parse() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
-- JSON.stringify() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+- [array.prototype.forEach()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement )
+- [setInterval()](ttps://developer.mozilla.org/en-US/docs/Web/API/setInterval )
+-[Nullish coalescing operator (??)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+- [Element: click event](https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event)
+- [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
+- [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
+- [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
+- [Optional chaining (?.)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 
 
 ## License
