@@ -9,7 +9,9 @@ let finalScoreSpan = document.querySelector("#final-score");
 let InitialsInput = document.querySelector("#initials");
 let submitButton = document.querySelector("#submit");
 let highScoreChart = document.querySelector("#highscores");
-let clearButton = document.querySelector("#clear")
+let clearButton = document.querySelector("#clear");
+let correctAnswerAudio =document.querySelector("#correctAnswerAudio");
+let incorrectAnswerAudio =document.querySelector("#incorrectAnswerAudio");
 
 // declare variables needed
 let time;
@@ -30,12 +32,14 @@ function startGame() {
 
     questionCounter = -1; // starts at -1 so the first question is index 0
 
-    // TO COMMENT
+    // for each question in the array, declares a function where currentValue is q which is executed for every element in the array
     questionsArray.forEach(q => {
+        //push the object into the array to keep them in scope (global scope, if not the object would disappear but not the elements)
         questionsDOM.push({
-            element: createQuestionDiv(q),
-            question: q,
-            answer: null
+            //object attribute (key: value pairs)
+            element: createQuestionDiv(q), // value = function result
+            question: q, //question is assigned to the value of q
+            answer: null //  placeholder to receive the answer
         })
     })
     startScreenDiv.className = "hide";
@@ -72,7 +76,7 @@ function createQuestionDiv(question) {
         answerButton.dataset.isCorrect = o.isCorrect ?? false
 
         // add eventListener for the answer button and pass the reference to the function
-        answerButton.addEventListener("click", answerClick);
+        answerButton?.addEventListener("click", answerClick);
     });
     return questionDiv;
 }
@@ -88,11 +92,14 @@ function answerClick(event) {
     if (event.target.dataset.isCorrect === 'true') {
         event.target.className = "correct";
         currentQuestion.answer = true;
+        correctAnswerAudio.play();
+        
 
     } else {
         event.target.className = "incorrect";
         currentQuestion.answer = false;
         time -= 5;
+        incorrectAnswerAudio.play();
     }
     transition();
 }
@@ -100,7 +107,7 @@ function answerClick(event) {
 // set a timer
 function setTimer() {
     time = questionsArray.length * 7;
-    let timer = setInterval(function () {
+    timer = setInterval(function () {
         time--;
         timerElement.textContent = time;
 
@@ -134,6 +141,7 @@ function transition() {
 
 // function endGame
 function endGame() {
+    clearInterval(timer);
     score = 0;
     questionsDOM.forEach(q => {
         q.element.className = "question hide";
@@ -175,6 +183,6 @@ function clearData() {
     localStorage.clear();
     highScoreChart.innerHTML = "";
 }
-clearButton.addEventListener("click", clearData);
+clearButton?.addEventListener("click", clearData);
 
 
