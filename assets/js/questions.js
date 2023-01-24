@@ -104,7 +104,7 @@ const questionsArray = [
         title: "What is the correct way to convert a string to an integer in JavaScript ?",
         options: [
             { answer: "stringToInt(\"myString\")" },
-            { answer: "arseInt(\"myString\")", isCorrect: true },
+            { answer: "parseInt(\"myString\")", isCorrect: true },
             { answer: "toInt(\"myString\")" },
             { answer: "int(\"myString\")" },
 
